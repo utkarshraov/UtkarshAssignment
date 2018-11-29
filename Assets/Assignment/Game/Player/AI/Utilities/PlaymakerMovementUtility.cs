@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaymakerMovementUtility : MovementUtility {
+public class PlaymakerMovementUtility : MovementUtility
+{
 
     public override float calculateUtility()
     {
@@ -40,3 +41,4 @@ public class PlaymakerMovementUtility : MovementUtility {
         } while (!validLocation && numAttempts < 10);
         unitMovement.MoveTo(targetLocation);
     }
+}

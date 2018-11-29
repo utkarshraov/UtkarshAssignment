@@ -30,18 +30,7 @@ public class Game : MonoBehaviour, IAppAware {
     private List<Player> players = null;
     public List<Player> Players { get { return players; }set { players = (value); } }
 
-    [SerializeField]
-    private GameObject unitPrefab;
-
-    [SerializeField]
-    private GameObject localPlayerPrefab;
-
-    [SerializeField]
-    private GameObject AggressiveAIPrefab;
-
-    [SerializeField]
-    private GameObject PlaymakerAIPrefab;
-
+  
     [SerializeField]
     private Transform playerParent;
 

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankAIMovementUtility : MovementUtility {
+public class TankAIMovementUtility : MovementUtility
+{
 
     public override float calculateUtility()
     {
@@ -40,3 +41,4 @@ public class TankAIMovementUtility : MovementUtility {
         } while (!validLocation && numAttempts < 10);
         unitMovement.MoveTo(targetLocation);
     }
+}

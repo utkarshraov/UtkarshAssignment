@@ -3385,9 +3385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1082460433}
-  nameLabel: {fileID: 337906131}
-  costLabel: {fileID: 1452803145}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -3518,9 +3518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1708541025}
-  nameLabel: {fileID: 65084769}
-  costLabel: {fileID: 1930602614}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -4128,9 +4128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1385757429}
-  nameLabel: {fileID: 1830606848}
-  costLabel: {fileID: 262542245}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -5700,9 +5700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 2106805352}
-  nameLabel: {fileID: 847354456}
-  costLabel: {fileID: 1559393791}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -5881,13 +5881,13 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.9416659
-      value: 0.9810923
-      inSlope: 0
-      outSlope: 0
+      time: 0.9113555
+      value: 0.9571139
+      inSlope: 0.35756302
+      outSlope: 0.35756302
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -5899,48 +5899,15 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   radius: 25
   onIslandSizeChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: WakeUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: WakeUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: WakeUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: Island+IslandEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!4 &747628408
@@ -6018,9 +5985,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 335180074}
-  nameLabel: {fileID: 1842826102}
-  costLabel: {fileID: 1098376340}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -7325,11 +7292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e17da10644554c5ca2e33dd11de14f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rowPrefab: {fileID: 114829792795759812, guid: 0740ec32a3a15411c8437fcf112c5dac,
-    type: 2}
-  tableParent: {fileID: 1429008035}
-  titleLabel: {fileID: 397422991}
-  messageLabel: {fileID: 623443777}
+  rowPrefab: {fileID: 0}
+  tableParent: {fileID: 0}
+  titleLabel: {fileID: 0}
+  messageLabel: {fileID: 0}
 --- !u!1 &842417215
 GameObject:
   m_ObjectHideFlags: 0
@@ -8015,9 +7981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1956215531}
-  nameLabel: {fileID: 900703660}
-  costLabel: {fileID: 1787133532}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -8480,9 +8446,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 25260165}
-  nameLabel: {fileID: 31391868}
-  costLabel: {fileID: 1806528124}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -8852,9 +8818,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1375257743}
-  nameLabel: {fileID: 2044845293}
-  costLabel: {fileID: 1057154682}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -9689,18 +9655,17 @@ MonoBehaviour:
   sideAreaContent: {fileID: 1803712969}
   mainItems:
   - {fileID: 11400000, guid: 1af804bbbecf54f8e99dd98baaff6684, type: 2}
-  - {fileID: 11400000, guid: f72a5e8917c964268bafa2ba9f7e67b2, type: 2}
-  - {fileID: 11400000, guid: ff972430d02d44fe893577ff5f3651af, type: 2}
   - {fileID: 11400000, guid: a6502beb5266b4ad29432c2a1570190f, type: 2}
   - {fileID: 11400000, guid: 71108cc6561df42dab2a9d86c6bab91c, type: 2}
-  - {fileID: 11400000, guid: 8f75ba648892e4cc2a304d4e749f8ce8, type: 2}
   - {fileID: 11400000, guid: dcfab44bc36734f05953520c19181c57, type: 2}
+  - {fileID: 11400000, guid: 8f75ba648892e4cc2a304d4e749f8ce8, type: 2}
   - {fileID: 11400000, guid: 1280fe5176cc34f24b7fe14cd592b89c, type: 2}
+  - {fileID: 11400000, guid: f72a5e8917c964268bafa2ba9f7e67b2, type: 2}
   sideItems:
-  - {fileID: 11400000, guid: b4f238037bebc4f7e81cf1c430944376, type: 2}
   - {fileID: 11400000, guid: 7119b0e2572b940b6b789a11f4593a33, type: 2}
-  - {fileID: 11400000, guid: 87e6b54de5d3243f499a92846c14cd47, type: 2}
   - {fileID: 11400000, guid: daba8348dd50a48fa92740a97eb2bf66, type: 2}
+  - {fileID: 11400000, guid: b4f238037bebc4f7e81cf1c430944376, type: 2}
+  - {fileID: 11400000, guid: 87e6b54de5d3243f499a92846c14cd47, type: 2}
   - {fileID: 11400000, guid: 255fd1751d0c14c69a0c62c2ed0dd1d6, type: 2}
   localPlayerStats: {fileID: 0}
   target: {fileID: 0}
@@ -10392,13 +10357,6 @@ MonoBehaviour:
   playerLoader: {fileID: 1215991460}
   units: []
   players: []
-  unitPrefab: {fileID: 1544624300129488, guid: 8ced456fff6389e448ce229120fad28e, type: 2}
-  localPlayerPrefab: {fileID: 1728818013736140, guid: c6cf3ac43636bbb4da8cf6bff9f32fd6,
-    type: 2}
-  AggressiveAIPrefab: {fileID: 1728818013736140, guid: 92ff48fd21f62c040b3b2f5e64cea5a1,
-    type: 2}
-  PlaymakerAIPrefab: {fileID: 1728818013736140, guid: 06ca7644aabe8f942a3c2571378a26c5,
-    type: 2}
   playerParent: {fileID: 1215991459}
   map: {fileID: 713385534}
   roundsParent: {fileID: 468947922}
@@ -11071,14 +11029,14 @@ MonoBehaviour:
   eventsystem: {fileID: 1120605477}
   graphicRaycaster: {fileID: 506161944}
   colors:
-  - {r: 0, g: 0.03644681, b: 1, a: 1}
+  - {r: 0, g: 0.015138149, b: 1, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0.14352083, a: 1}
-  - {r: 1, g: 0.939844, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0.8780918, a: 1}
-  - {r: 0, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0.97981787, b: 0, a: 1}
+  - {r: 0.42851412, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0.88915014, a: 1}
+  - {r: 0, g: 0.9806142, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
   numPlayers: 4
   unitPrefab: {fileID: 1544624300129488, guid: 8ced456fff6389e448ce229120fad28e, type: 2}
   localPlayerPrefab: {fileID: 1728818013736140, guid: c6cf3ac43636bbb4da8cf6bff9f32fd6,
@@ -11846,9 +11804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 107159270}
-  nameLabel: {fileID: 710411181}
-  costLabel: {fileID: 681539759}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -12697,9 +12655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1829484794}
-  nameLabel: {fileID: 1848794930}
-  costLabel: {fileID: 988453222}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -13032,10 +12990,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1383658796}
-  zoomRange: {x: 10, y: 70}
+  zoomRange: {x: 10, y: 100}
   zoomRate: 1
-  panMin: {x: -30, y: -30, z: -30}
-  panMax: {x: 30, y: 30, z: 30}
+  panMin: {x: -30, y: 10, z: -30}
+  panMax: {x: 30, y: 100, z: 30}
   panRate: 30
   panMargin: 10
 --- !u!1 &1385529366
@@ -13672,9 +13630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 522441516}
-  nameLabel: {fileID: 775599960}
-  costLabel: {fileID: 266852852}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -13841,9 +13799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa97fcfb1f82943e485a9208f44d7655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimapCamera: {fileID: 1924179455}
-  mainCamera: {fileID: 1383658795}
-  miniMapImage: {fileID: 1460829317}
+  minimapCamera: {fileID: 0}
+  mainCamera: {fileID: 0}
+  miniMapImage: {fileID: 0}
   raycastLayers:
   - Terrain
   maxRaycastDistance: 100
@@ -13945,9 +13903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1213325848}
-  nameLabel: {fileID: 144926465}
-  costLabel: {fileID: 1547935287}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -14336,7 +14294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerSecond: 10
-  damageType: 1
+  damageType: 0
   healthsInArea: []
 --- !u!1 &1542500514
 GameObject:
@@ -14399,25 +14357,14 @@ MonoBehaviour:
   - {fileID: 925411231}
   abilityPressedAction:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TryCastAbility
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Ability, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: AbilityEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   unitNameLabel: {fileID: 1857977221}
   healthBarSlider: {fileID: 1052385795}
   healthLabel: {fileID: 1950785960}
   healthRegenLabel: {fileID: 1378437617}
   previewCamTransform: {fileID: 560741664}
-  previewOffset: {x: 0, y: 0.8, z: 3.5}
+  previewOffset: {x: 0, y: 5, z: 1.5}
   selectedUnitPreview: {fileID: 1203974802}
   itemSlots:
   - {fileID: 1645659504}
@@ -17779,9 +17726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 1736849630}
-  nameLabel: {fileID: 603161420}
-  costLabel: {fileID: 1371717224}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
@@ -18248,9 +18195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbac1106d1a574397b8f6ecd03059857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 162352598}
-  nameLabel: {fileID: 198830098}
-  costLabel: {fileID: 1797136168}
+  icon: {fileID: 0}
+  nameLabel: {fileID: 0}
+  costLabel: {fileID: 0}
   buyButton: {fileID: 0}
   OnPurchase:
     m_PersistentCalls:
