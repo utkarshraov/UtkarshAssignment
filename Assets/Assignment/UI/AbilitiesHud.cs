@@ -8,6 +8,13 @@ public class AbilitiesHud : MonoBehaviour {
     [SerializeField]
     private Unit currentUnit = null;
 
+    public Unit CurrentUnit { set { currentUnit = value; } }
+
+    [SerializeField]
+    private Player currentPlayer = null;
+
+    public Player CurrentPlayer { set { currentPlayer = value; } }
+
     [SerializeField]
     private List<AbilityButton> abilityButtons = new List<AbilityButton>();
 
@@ -95,7 +102,8 @@ public class AbilitiesHud : MonoBehaviour {
 
     public void OnAbilityButtonPressed(AbilityButton abilityButton) {
         if (abilityPressedAction != null) {
-            abilityPressedAction.Invoke(abilityButton.Ability);
+            //abilityPressedAction.Invoke(abilityButton.Ability);
+            currentPlayer.GetComponent<LocalPlayerController>().TryCastAbility(abilityButton.Ability);
         }
     }
 

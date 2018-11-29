@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1728818013736140}
+  m_IsPrefabAsset: 1
+--- !u!1 &1728818013736140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4726459588232286}
+  - component: {fileID: 114085591728758362}
+  - component: {fileID: 114145373281622110}
+  - component: {fileID: 114854944389341304}
+  - component: {fileID: 114044146877890122}
+  m_Layer: 0
+  m_Name: AggressiveAIPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4726459588232286
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728818013736140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114044146877890122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728818013736140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f96abd59c9bca428236aa56fec1e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityContent: {fileID: 4726459588232286}
+  itemContent: {fileID: 4726459588232286}
+  abilities:
+  - {fileID: 11400000, guid: 1af804bbbecf54f8e99dd98baaff6684, type: 2}
+  - {fileID: 11400000, guid: f72a5e8917c964268bafa2ba9f7e67b2, type: 2}
+  - {fileID: 11400000, guid: 71108cc6561df42dab2a9d86c6bab91c, type: 2}
+  - {fileID: 11400000, guid: ff972430d02d44fe893577ff5f3651af, type: 2}
+  items:
+  - {fileID: 11400000, guid: 7119b0e2572b940b6b789a11f4593a33, type: 2}
+  - {fileID: 11400000, guid: 255fd1751d0c14c69a0c62c2ed0dd1d6, type: 2}
+  playerStats: {fileID: 114145373281622110}
+  target: {fileID: 0}
+  game: {fileID: 0}
+--- !u!114 &114085591728758362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728818013736140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e9fb00f065c4464bb3bcf830317ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 1, b: 1, a: 1}
+  isLocal: 0
+--- !u!114 &114145373281622110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728818013736140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1c59da47416444389e90f44af34fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoundWins: 0
+  Kills: 0
+  Deaths: 0
+  Gold: 40
+--- !u!114 &114854944389341304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728818013736140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88172d928de78474e8a8542e55e3b9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114085591728758362}
+  game: {fileID: 0}
+  units: []
+  utilities: []
+  dangerThreshold: 50
+  reactionTime: 1
+  aIStoreController: {fileID: 114044146877890122}
+  buyingOrder: 

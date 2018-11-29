@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class AggressiveAIController : PlayerController {
 
-    private State currentState = State.Shopping;
+    
 
     //danger value to determine how and when the AI should attack
     private float danger = 0f;
 
+    public List<Utility> utilities;
+
     [SerializeField]
     private float dangerThreshold;
 
+    [SerializeField]
+    private float reactionTime = 2f;
+
+    public float ReactionTime { set { reactionTime = value; } }
+
+    [SerializeField]
+    AIStoreController aIStoreController = null;
+
+    [SerializeField]
+    private int[] buyingOrder;
+
+    private int currentShopIndex = 0;
     private float maxRange;
 
     private Unit unit;
@@ -22,10 +36,19 @@ public class AggressiveAIController : PlayerController {
         StartCoroutine(Act());
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void setup()
+    {
+        aIStoreController.PurchaseAbility(0);
+        aIStoreController.PurchaseAbility(1);
+        aIStoreController.PurchaseAbility(2);
+        aIStoreController.PurchaseItem(0);
+        aIStoreController.PurchaseItem(1);
+        aIStoreController.PurchaseAbility(0);
+        aIStoreController.PurchaseAbility(1);
+        aIStoreController.PurchaseAbility(2);
+        aIStoreController.PurchaseItem(0);
+        aIStoreController.PurchaseItem(1);
+    }
 
     IEnumerator Act()
     {
@@ -38,27 +61,52 @@ public class AggressiveAIController : PlayerController {
                 yield return null;
                 continue;
             }
+           
+                utilities = new List<Utility>(unit.GetComponentsInChildren<Utility>());
+                foreach (Utility utility in utilities)
+                {
+                    utility.utilityHelper = unit.GetComponent<UtilityHelper>();
+                    utility.Caster = unit;
+                }
+                float maxUtility = 0;
+                int index = 0;
 
-            if(danger<dangerThreshold)
+                for (int i = 0; i < utilities.Count; i++)
+                {
+                    float util = utilities[i].calculateUtility();
+                    if (util > maxUtility)
+                    {
+                        maxUtility = util;
+                        index = i;
+                    }
+                }
+                if (maxUtility > 0)
+                {
+                    utilities[index].performAction();
+                }
+            
+            
+           
+           
+           
+
+            yield return new WaitForSeconds(reactionTime);
+        }
+    }
+
+
+
+    private bool assessCooldowns()
+    {
+        bool noSpells = false;
+        foreach (Ability a in unit.Abilities)
+        {
+            if(!a.GetComponent<Cooldown>().Ready)
             {
-                currentState = State.Aggressive;
+                noSpells = true;
             }
 
-
-            yield return new WaitForSeconds(1f);
         }
-    }
-
-    private void assessCooldowns()
-    {
-        foreach(Ability a in unit.Abilities)
-        {
-            
-        }
-    }
-
-    private void getNearbyUnits()
-    {
-
+        return noSpells;
     }
 }

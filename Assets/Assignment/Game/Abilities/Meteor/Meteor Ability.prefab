@@ -34,6 +34,7 @@ GameObject:
   - component: {fileID: 114641363699119136}
   - component: {fileID: 114403850679804960}
   - component: {fileID: 114995697929161144}
+  - component: {fileID: 114218670329010178}
   m_Layer: 0
   m_Name: Meteor Ability
   m_TagString: Untagged
@@ -102,6 +103,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114218670329010178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1737421451981092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efef45a4f3f6a2243abf723a174fc2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utilityHelper: {fileID: 0}
+  cooldown: {fileID: 114280655834816260}
 --- !u!114 &114232175590938200
 MonoBehaviour:
   m_ObjectHideFlags: 1

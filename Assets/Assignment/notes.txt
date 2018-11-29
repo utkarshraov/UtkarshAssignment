@@ -1,9 +1,51 @@
 Assignment Notes
 
-Assignment: 1
-Student: Gene Peterson
+Assignment: 6 AI
+Student: Utkarsh Rao Viswavasu
 
-What are the controls for the locally controlled unit?
-Right click on the map to move to that point.
-'S' key stops any movements in progress.
-Escape returns to main menu.
+This was maybe the most time I spent on an assignment in grad school, easily over 20 hours. 
+
+Things I have working: There's 3 basic kinds of AI - Aggressive, Playmaker, Tank
+
+They're mainly differentiated by their spell buying and movement. 
+
+Aggressive- Maximises damage. Buys fireball, blast and meteor. 
+It tries to cast spells to maximise the number of units hit for blast and meteor. 
+It's movement means it always tries to be close to other units so it's always in range 
+to cast spells.
+
+Playmaker - Maximises speed and disruption. Buys gravitywell, tether, and teleport
+It casts spells at the appropriate time, but it buys movement speed to maximise staying away
+from opponents. It's movement is also programmed to make it stay away from units as much as possible.
+
+Tank- This is the AI i put the least time into so it doesn't do very much.
+It buys Spell Shield and Stealth, and uses them on cooldown, and also buys armor and amulet to maximise
+staying alive. 
+
+
+Each of these also has an easy and hard version, the only difference between those is that easy bots
+update their utilities every 1.5 seconds and hard bots update every 4 seconds. Essentially reaction time.
+
+
+There's a configuration screen (The scene GameConfig) that allows you to select up to 8 players and all the bot variations.
+
+If you run from the game scene though, you can set the number of bots to spawn in the PlayerLoader script(attached to the Players GameObject under Game)
+it spawns one player AI and the others are randomly chosen(but always Hard bots)
+The default value is 4 players. 
+
+The thing i couldn't get to is make the bots not attack during the preRound phase, and they do all their shopping at the beginning of the first round.
+
+Their item buying is optimised to suit their AI. I'm proud of the fact that I got the AI to work through your Purchaseable system.
+They use a custom script called AIStoreController that's mostly the same as StoreController but without the UI elements. 
+
+I tried really hard overall to make sure that my code was scaleable and followed good design principles. For the AI, each spell has a utility function, as does movement. 
+THe AI calculates the utilities for every "utility" attached to it, and chooses the action that has the highest. 
+
+The utility is coded so that the abilities can be dropped/purchased by any AI and it will just work, it's entirely ability independent. 
+
+Each AI has a different movement utility function as well.
+
+For the actual utilities, I found that having float values that changed a lot was next to impossible to tune
+given the timeframe that we have, so mine function on a priority principle. THe utility values are integers
+between 0 and 5, with 5 being highest priority and 0 being don't do it. This made it easier to tune the values based on
+the utility functions. 

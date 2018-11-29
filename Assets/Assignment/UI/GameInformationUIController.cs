@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameInformationUIController : MonoBehaviour,IAppAware {
 
     [SerializeField]
@@ -33,6 +34,7 @@ public class GameInformationUIController : MonoBehaviour,IAppAware {
     {
         Reset();
         gameInformation.NumberOfPlayers = num + 1;
+        gameInformation.instancePCs(num + 1);
         for (int i=0;i<=num;i++)
         {
             GameObject PI = Instantiate(playerInformationPrefab);
@@ -45,7 +47,8 @@ public class GameInformationUIController : MonoBehaviour,IAppAware {
 
     private void Reset()
     {
-        for(int i =0;i<8;i++)
+        gameInformation.resetPCs();
+        for (int i =0;i<8;i++)
         {
             playerInfos[i] = null;
         }
@@ -57,6 +60,21 @@ public class GameInformationUIController : MonoBehaviour,IAppAware {
 
     public void loadGame()
     {
-        app.Scenes.LoadGame();
+        for (int i = 0; i < ParentTransform.childCount; i++)
+        {
+            Dropdown[] dropdowns = ParentTransform.GetChild(i).GetComponentsInChildren<Dropdown>();
+            gameInformation.setPlayerController(i, dropdowns[0].value);
+            gameInformation.setPLayerDifficulty(i, dropdowns[1].value);
+        }
+
+        if(app !=null)
+        {
+            app.Scenes.LoadGame();
+        }
+        else
+        {
+            SceneManager.LoadScene("WarlocksGame");
+        }
+
     }
 }

@@ -52,6 +52,23 @@ public class UpgradePurchasable : Purchasable, IUpgradePurchasable {
 
         game.InGameUi.AbilitiesHud.UpdateUnit(target);  // TODO: target.Modified(); will trigger event that UI is listening for, remove UI dependency from this class
     }
+    public override void OnPurchased(Unit something)
+    {
+        currentUpgrade++;
+
+        // upgrade unit ability
+        Ability targetCurrentAbility = something.Abilities.Find(a => a.Id == abilityPrefab.Id);
+        if (targetCurrentAbility == null)
+        {
+            // unit doesn't have this ability yet, add it
+            targetCurrentAbility = Instantiate<Ability>(abilityPrefab, something.AbilitiesParent);
+            something.Abilities.Add(targetCurrentAbility);
+            Bind(targetCurrentAbility);
+        }
+        Level level = targetCurrentAbility.GetComponent<Level>();
+        level.Current = currentUpgrade;
+
+    }
 
     private void UpdateCurrentUpgrade() {
         // update currentUpgrade to match what unit has

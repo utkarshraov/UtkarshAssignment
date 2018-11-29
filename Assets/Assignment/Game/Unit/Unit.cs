@@ -15,7 +15,7 @@ public class Unit : MonoBehaviour, IUnit {
 
     [SerializeField]
     private Player owner = null;
-    public Player Owner { get { return owner; } }
+    public Player Owner { get { return owner; } set { owner = value; } }
 
     [SerializeField]
     private UnitController controller = null;

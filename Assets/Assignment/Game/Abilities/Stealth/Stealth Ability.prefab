@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114798116027838050}
   - component: {fileID: 114412915712075560}
   - component: {fileID: 114099321915447564}
+  - component: {fileID: 114996350260594428}
   m_Layer: 0
   m_Name: Stealth Ability
   m_TagString: Untagged
@@ -252,3 +253,16 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114996350260594428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849274880015150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148b5820826db39428f751234accf22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utilityHelper: {fileID: 0}
+  cooldown: {fileID: 114164152528077984}

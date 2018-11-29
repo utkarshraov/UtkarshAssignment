@@ -6,7 +6,7 @@ public class Player : MonoBehaviour, IPlayer {
 
     [SerializeField]
     private Color color = Color.white;
-    public Color Color { get { return color; } }
+    public Color Color { get { return color; } set { color = value; } }
 
     [SerializeField]
     private bool isLocal = false;

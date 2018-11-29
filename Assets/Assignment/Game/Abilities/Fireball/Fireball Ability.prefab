@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114068833485235744}
   - component: {fileID: 114236191450185672}
   - component: {fileID: 114718515510022640}
+  - component: {fileID: 114918618311731770}
   m_Layer: 0
   m_Name: Fireball Ability
   m_TagString: Untagged
@@ -95,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: []
-  prefab: {fileID: 1106997109378160, guid: f98664d84c8bf4edb918c454c2ef93e2, type: 2}
+  prefab: {fileID: 0}
   autoCreate: 1
   initialSize: 1
   prepareAction:
@@ -270,6 +271,22 @@ MonoBehaviour:
     value: 0
     min: 0
     max: 0
+--- !u!114 &114918618311731770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714095646657216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfadc19bc2c08c34c946000730d70849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utilityHelper: {fileID: 0}
+  abilityType: 0
+  cooldown: {fileID: 114739464562032144}
+  hitRange: 10
+  castError: 0
 --- !u!114 &114928959521054226
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -17,6 +17,11 @@ public class TurnToDirectionAction : GameAction {
     protected Coroutine actionInProgress = null;
     public override bool IsInProgress { get { return actionInProgress != null; } }
 
+    private void Start()
+    {
+        target = gameObject.GetComponentInParent<Unit>().gameObject.transform;
+    }
+
     public override void Perform() {
         actionInProgress = StartCoroutine(Perform_Coroutine());
     }

@@ -12,11 +12,15 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     protected Game game = null;
 
+    public Game Gamee { set { game = value; } }
+
     [SerializeField]
-    protected List<Unit> units = new List<Unit>();
+    public List<Unit> units = new List<Unit>();
     public List<IUnit> Units { get { return units.ConvertAll<IUnit>((u) => u as IUnit); } }
 
-    public enum State { Shopping, Aggressive, Defensive, Fleeing};
+    public enum State { Shopping, NotShopping};
+
+    protected State currentState;
 
     protected virtual void Start() {
         AssignPlayerColorToUnits();

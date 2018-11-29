@@ -35,6 +35,8 @@ public class UnitMovement : MonoBehaviour {
     [SerializeField]
     private Map map = null;
 
+    public Map Mapp { get { return map; }set { map = value; } }
+
     [SerializeField]
     private string forwardAnimation = "Forward";
 

@@ -13,6 +13,8 @@ public abstract class Purchasable : ScriptableObject, IPurchasable {
     public abstract bool CanPurchase();
     public abstract void OnPurchased();
 
+    public abstract void OnPurchased(Unit thing);
+
     public abstract Unit Target { get; set; }
     public abstract Game Game { get; set; }
 

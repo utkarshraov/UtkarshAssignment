@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114940907968004194}
   - component: {fileID: 114504273247055942}
   - component: {fileID: 114252953086102892}
+  - component: {fileID: 114849559629127096}
   m_Layer: 0
   m_Name: Spell Shield Ability
   m_TagString: Untagged
@@ -301,6 +302,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caster: {fileID: 0}
+--- !u!114 &114849559629127096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800441433670748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807b6f65fac521042a5fe7335f6fe474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utilityHelper: {fileID: 0}
+  cooldown: {fileID: 114528465920705046}
 --- !u!114 &114940907968004194
 MonoBehaviour:
   m_ObjectHideFlags: 1

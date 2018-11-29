@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114949381097861738}
   - component: {fileID: 114490054029907316}
   - component: {fileID: 114362796970008456}
+  - component: {fileID: 114154953911068540}
   m_Layer: 0
   m_Name: Teleport Ability
   m_TagString: Untagged
@@ -99,6 +100,19 @@ MonoBehaviour:
   targetingMessage: Select a target
   messageColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   arrow: {fileID: 0}
+--- !u!114 &114154953911068540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08616a21bc1f31140a909e06ccc206e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utilityHelper: {fileID: 0}
+  cooldown: {fileID: 114918833747214328}
 --- !u!114 &114362796970008456
 MonoBehaviour:
   m_ObjectHideFlags: 1

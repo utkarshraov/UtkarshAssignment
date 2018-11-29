@@ -124,4 +124,10 @@ public class PointTargeting : AbilityTargeting<Vector3Event,UnityEvent>, IInputC
         origin = unit.transform;
     }
 
+    public void BindAI(Unit unit, Game game)
+    {
+        origin = unit.transform;
+        inputManager = game.InGameUi.InputManager;
+    }
+
 }

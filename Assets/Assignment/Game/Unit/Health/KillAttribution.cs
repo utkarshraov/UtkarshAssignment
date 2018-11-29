@@ -22,6 +22,7 @@ public class KillAttribution : MonoBehaviour {
             Player player = killedBy.Owner;
             PlayerGameStats playerGameStats = player.GetComponent<PlayerGameStats>();
             playerGameStats.Kills++;
+            playerGameStats.Gold += 8;
             Debug.LogFormat("{0} killed {1}", killedBy, unit);
         }
     }

@@ -8,22 +8,22 @@ public class LocalPlayerController : PlayerController, IInputController {
 
     [SerializeField]
     private Unit selectedUnit = null;
-    public Unit SelectedUnit { get { return selectedUnit; } }
+    public Unit SelectedUnit { get { return selectedUnit; } set { selectedUnit = value; } }
 
     [SerializeField]
-    private Map map = null;
+    public Map map = null;
 
     [SerializeField]
-    private InGameUi inGameUi = null;
+    public InGameUi inGameUi = null;
 
     [SerializeField]
-    private GraphicRaycaster graphicRaycaster = null;
+    public GraphicRaycaster graphicRaycaster = null;
 
     [SerializeField]
-    private EventSystem eventSystem = null;
+    public EventSystem eventSystem = null;
 
     [SerializeField]
-    private InputManager inputManager = null;
+    public InputManager inputManager = null;
 
     public UnitEvent OnSelectedUnitChanged;
 
@@ -87,8 +87,11 @@ public class LocalPlayerController : PlayerController, IInputController {
         if(unit != selectedUnit || forceEvent) {
             selectedUnit = unit;
             OnSelectedUnitChanged.Invoke(selectedUnit);
+
         }
     }
+
+
 
     public void TryCastAbility(Ability ability) {
 

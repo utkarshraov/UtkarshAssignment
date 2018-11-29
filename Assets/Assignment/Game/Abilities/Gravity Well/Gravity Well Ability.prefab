@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 114164656815402874}
   - component: {fileID: 114246213008449072}
   - component: {fileID: 114618673859865562}
+  - component: {fileID: 114536378407354672}
   m_Layer: 0
   m_Name: Gravity Well Ability
   m_TagString: Untagged
@@ -321,6 +322,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114536378407354672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfe0a25573be924690b795fb8257e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  utilityHelper: {fileID: 0}
+  cooldown: {fileID: 114933743853867480}
 --- !u!114 &114618673859865562
 MonoBehaviour:
   m_ObjectHideFlags: 1

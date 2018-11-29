@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour, IAppAware {
 
@@ -14,17 +16,34 @@ public class Game : MonoBehaviour, IAppAware {
     [SerializeField] private Camera cam = null;
     public Camera Camera { get { return cam; } }
 
-    private GameInformation gameInformation;
+    private GameInformation gameInformation = null;
+
+    [SerializeField]
+    private PlayerLoader playerLoader = null;
 
     [SerializeField]
     private List<Unit> units = null;
 
+    public List<Unit> Units { get { return units; }set { units = value; } }
+
     [SerializeField]
     private List<Player> players = null;
-    public List<Player> Players { get { return players; } }
+    public List<Player> Players { get { return players; }set { players = (value); } }
 
     [SerializeField]
     private GameObject unitPrefab;
+
+    [SerializeField]
+    private GameObject localPlayerPrefab;
+
+    [SerializeField]
+    private GameObject AggressiveAIPrefab;
+
+    [SerializeField]
+    private GameObject PlaymakerAIPrefab;
+
+    [SerializeField]
+    private Transform playerParent;
 
     [SerializeField]
     private Map map = null;
@@ -57,6 +76,8 @@ public class Game : MonoBehaviour, IAppAware {
     public App App { get { return app; } set { app = value; } }
 
     public void StartGame() {
+
+        playerLoader.spawnPlayers();
         StartNewRound();
     }
 
@@ -161,6 +182,12 @@ public class Game : MonoBehaviour, IAppAware {
 
         inGameUi.RoundResultsPanel.SetData(players);
         inGameUi.RoundResultsPanel.Show();
+    }
+
+    void spawnPlayers()
+    {
+     
+
     }
 
     IEnumerator GameOver_Coroutine() {

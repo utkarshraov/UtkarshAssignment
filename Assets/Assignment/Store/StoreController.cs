@@ -18,11 +18,22 @@ public class StoreController : MonoBehaviour {
     [SerializeField] private Text goldAmount = null;
 
     private void Start() {
+        
+    }
+
+    public void realStart()
+    {
         MakeItemInstances();
         UpdateUi();
     }
 
-    void MakeItemInstances() {
+    public void setPlayer(Unit unit, PlayerGameStats playerGameStats)
+    {
+        target = unit;
+        localPlayerStats = playerGameStats;
+    }
+
+    public void MakeItemInstances() {
         List<Purchasable> mainPrefabs = new List<Purchasable>(mainItems);
         mainItems.Clear();
         foreach(Purchasable purchasablePrefab in mainPrefabs) {
