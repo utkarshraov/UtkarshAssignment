@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.IO;
 
 public class Game : MonoBehaviour, IAppAware {
+
+    public static Game instance = null;
 
     [SerializeField]
     private int requiredRoundWins = 2;
@@ -17,9 +20,6 @@ public class Game : MonoBehaviour, IAppAware {
     public Camera Camera { get { return cam; } }
 
     private GameInformation gameInformation = null;
-
-    [SerializeField]
-    private PlayerLoader playerLoader = null;
 
     [SerializeField]
     private List<Unit> units = null;
@@ -60,19 +60,24 @@ public class Game : MonoBehaviour, IAppAware {
     private float gameEndDelay = 5f;
 
 
+
     [SerializeField]
     private App app = null;
     public App App { get { return app; } set { app = value; } }
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void StartGame() {
 
-        playerLoader.spawnPlayers();
         StartNewRound();
     }
 
     void StartNewRound() {
         int roundNum = rounds.Count + 1;
-        Round round = Instantiate<Round>(roundPrefab, roundsParent);
+        Round round = PhotonNetwork.Instantiate(Path.Combine("Prefabs","Round"),Vector3.zero,Quaternion.identity,0).GetComponent<Round>();
         round.name = string.Format("Round {0}", roundNum);
         rounds.Add(round);
 
@@ -171,12 +176,6 @@ public class Game : MonoBehaviour, IAppAware {
 
         inGameUi.RoundResultsPanel.SetData(players);
         inGameUi.RoundResultsPanel.Show();
-    }
-
-    void spawnPlayers()
-    {
-     
-
     }
 
     IEnumerator GameOver_Coroutine() {

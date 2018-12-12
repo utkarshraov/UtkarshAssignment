@@ -12,7 +12,7 @@ public class LobbyCanvas : MonoBehaviour {
     {
         if (PhotonNetwork.JoinRoom(roomName))
         {
-
+            MainCanvas.Instance.CurrentRoomCanvas.setName(roomName);
         }
         else
         {

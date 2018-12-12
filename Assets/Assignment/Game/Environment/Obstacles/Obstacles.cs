@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Obstacles : MonoBehaviour {
-
-    [SerializeField]
-    private List<GameObject> prefabs = new List<GameObject>();
 
     [SerializeField]
     private List<GameObject> spawned = new List<GameObject>();
@@ -35,8 +33,7 @@ public class Obstacles : MonoBehaviour {
 
     public void Spawn(int count) {
         for (int i = 0; i < count; i++) {
-            GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
-            GameObject go = Instantiate(prefab);
+            GameObject go = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "obstacle"), Vector3.zero, Quaternion.identity, 0);
             Vector3 randomPoint = map.Island.GetRandomPosition();
             randomPoint.x *= spawnAreaPercentage;
             randomPoint.z *= spawnAreaPercentage;

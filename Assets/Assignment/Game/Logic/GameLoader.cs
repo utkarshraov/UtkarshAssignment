@@ -37,7 +37,7 @@ public class GameLoader : MonoBehaviour, ISceneLoader {
     void Start() {
         App app = FindObjectOfType<App>();
         if(app == null) {
-            OnSceneReady();
+            //OnSceneReady();
         }
     }
 #endif

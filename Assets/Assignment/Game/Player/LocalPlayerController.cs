@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LocalPlayerController : PlayerController, IInputController {
 
+    private PhotonView photonView;
+
     [SerializeField]
     private Unit selectedUnit = null;
     public Unit SelectedUnit { get { return selectedUnit; } set { selectedUnit = value; } }
@@ -30,6 +32,11 @@ public class LocalPlayerController : PlayerController, IInputController {
     private const int LEFT_MOUSE_BUTTON = 0;
     private const int RIGHT_MOUSE_BUTTON = 1;
 
+    private void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
+
     protected override void Start() {
         base.Start();
         inputManager.Add(this);
@@ -37,51 +44,69 @@ public class LocalPlayerController : PlayerController, IInputController {
     }
 
     public bool ProcessInput() {
-        
+
         // player commands
-
-        if(Input.GetKeyDown(KeyCode.Alpha1)) {
-            SetSelectedUnit(units[0]);
-        }
-
-        if(Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON) && !IsMouseOverUi()) {
-            
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit raycastHit;
-            bool hit = Physics.Raycast(ray, out raycastHit);
-            if(hit) {
-                Unit unit = raycastHit.collider.GetComponentInParent<Unit>();
-                SetSelectedUnit(unit);
-            } else {
-                SetSelectedUnit(null);
-            }
-        }
-
-        if(Input.GetKeyDown(KeyCode.O)) {
-            game.InGameUi.ShowStore();
-        }
-
-        if (Input.GetKey(KeyCode.Escape)) {
-            game.App.Scenes.GoToMainMenu();
-        }
-
-        // unit commands
-        if (selectedUnit != null && selectedUnit.Owner == player) {
-            if (Input.GetMouseButtonDown(RIGHT_MOUSE_BUTTON)) {
-                Vector3 mapPos, mapNormal;
-                bool hit = map.GetMapPointFromScreenPoint(Input.mousePosition, out mapPos, out mapNormal);
-                if (hit) {
-                    selectedUnit.Controller.MoveTo(mapPos);
-                }
-            }
-
-            if (Input.GetKey(KeyCode.S)) {
-                selectedUnit.Controller.StopAll();
-            }
+        if (photonView.isMine)
+        {
+            checkInput();
         }
 
         return true;
 	}
+
+    private void checkInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetSelectedUnit(units[0]);
+        }
+
+        if (Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON) && !IsMouseOverUi())
+        {
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit raycastHit;
+            bool hit = Physics.Raycast(ray, out raycastHit);
+            if (hit)
+            {
+                Unit unit = raycastHit.collider.GetComponentInParent<Unit>();
+                SetSelectedUnit(unit);
+            }
+            else
+            {
+                SetSelectedUnit(null);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            game.InGameUi.ShowStore();
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            game.App.Scenes.GoToMainMenu();
+        }
+
+        // unit commands
+        if (selectedUnit != null && selectedUnit.Owner == player)
+        {
+            if (Input.GetMouseButtonDown(RIGHT_MOUSE_BUTTON))
+            {
+                Vector3 mapPos, mapNormal;
+                bool hit = map.GetMapPointFromScreenPoint(Input.mousePosition, out mapPos, out mapNormal);
+                if (hit)
+                {
+                    selectedUnit.Controller.MoveTo(mapPos);
+                }
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                selectedUnit.Controller.StopAll();
+            }
+        }
+    }
 
     private void SetSelectedUnit(Unit unit, bool forceEvent = false) {
         if(unit != selectedUnit || forceEvent) {

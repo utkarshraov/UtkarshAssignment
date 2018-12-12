@@ -23,10 +23,7 @@ public class Lobby : MonoBehaviour {
         print("Joined Lobby");
 
 
-        if (!PhotonNetwork.inRoom)
-        {
-            MainCanvas.Instance.LobbyCanvas.transform.SetAsLastSibling();
-        }
+       
     }
 	
 }

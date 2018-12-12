@@ -9,5 +9,9 @@ public class PlayerGameStats : MonoBehaviour {
     public int Deaths = 0;
 
     public int Gold = 0;
-	
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        throw new System.NotImplementedException();
+    }
 }
