@@ -330,6 +330,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114720910012602954, guid: b2f68e3e5dd0b444ea530163be71be46,
+        type: 2}
+      propertyPath: gameConfigSceneName
+      value: MultiplayerLobby
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f68e3e5dd0b444ea530163be71be46, type: 2}
   m_IsPrefabAsset: 0

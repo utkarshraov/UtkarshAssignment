@@ -19,7 +19,7 @@ public class Scenes : MonoBehaviour {
     private string mainMenuSceneName = "MainMenu";
 
     [SerializeField]
-    private string gameConfigSceneName = "GameConfiguration";
+    private string gameConfigSceneName = "MultiplayerLobby";
 
     public void GoToMainMenu() {
         LoadScene(mainMenuSceneName, false);

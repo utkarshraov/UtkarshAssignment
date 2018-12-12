@@ -44,7 +44,7 @@ public class MeteorAction : StandardAbilityAction, IBindGame, IDamageSource {
     protected override IEnumerator PerformAction() {
 
         Transform origin = actor.transform;
-        Meteor meteor = Instantiate<Meteor>(meteorPrefab);
+        Meteor meteor = PhotonNetwork.Instantiate("Meteor",Vector3.zero,Quaternion.identity,0).GetComponent<Meteor>();
         meteor.RollDamage.DamageSource = this;
 
         // fall

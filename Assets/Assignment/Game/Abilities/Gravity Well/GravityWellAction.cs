@@ -36,7 +36,7 @@ public class GravityWellAction : StandardAbilityAction {
         yield return new WaitForSeconds(setupTime);
 
         float adjOuterRadius = outerRadius * actor.AbilityRangeMultiplier.Current;
-        GameObject vfx = Instantiate<GameObject>(vfxPrefab);
+        GameObject vfx = PhotonNetwork.Instantiate("Gravity Well VFX",Vector3.zero,Quaternion.identity,0);
         vfx.transform.position = location + vfxOffset;
         vfx.transform.localScale = adjOuterRadius * Vector3.one;
 

@@ -31,7 +31,7 @@ public class BlastAction : StandardAbilityAction, IDamageSource {
     [SerializeField] private AnimationCurve powerCurve = null;
 
     protected override IEnumerator PerformAction() {
-        GameObject explosion = Instantiate(explosionPrefab);
+        GameObject explosion = PhotonNetwork.Instantiate("Explosion",actor.transform.position,Quaternion.identity,0);
         explosion.transform.position = actor.transform.position;
 
         float adjOuterRadius = outerRadius * actor.AbilityRangeMultiplier.Current;

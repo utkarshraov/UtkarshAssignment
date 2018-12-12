@@ -66,8 +66,9 @@ public class PlayerNetwork : MonoBehaviour {
         if(PlayersInGame == PhotonNetwork.playerList.Length)
         {
             print("All players finished loading");
-            PhotonView.RPC("RPCStartGame", PhotonTargets.MasterClient);
+
             PhotonView.RPC("RPCCreatePlayer", PhotonTargets.All);
+            PhotonView.RPC("RPCStartGame", PhotonTargets.MasterClient);
         }
     }
 
@@ -103,9 +104,9 @@ public class PlayerNetwork : MonoBehaviour {
         unit.transform.name = "Unit" + (i + 1);
         unit.GetComponent<Unit>().Owner = player.GetComponent<Player>();
         player.GetComponent<LocalPlayerController>().units.Add(unit.GetComponent<Unit>());
-        NetworkPlayerLoader.instance.units.Add(unit.GetComponent<Unit>());
         player.GetComponent<LocalPlayerController>().SelectedUnit = player.GetComponent<LocalPlayerController>().units[0];
         unit.GetComponent<UnitMovement>().Mapp = NetworkPlayerLoader.instance.map;
+        NetworkPlayerLoader.instance.game.Units.Add(unit.GetComponent<Unit>());
 
         NetworkPlayerLoader.instance.abiltiesHud.SetUnit(unit.GetComponent<Unit>(), true);
         NetworkPlayerLoader.instance.abiltiesHud.CurrentPlayer = player.GetComponent<Player>();

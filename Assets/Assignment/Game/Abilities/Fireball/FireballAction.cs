@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class FireballAction : StandardAbilityAction, IDamageSource {
@@ -16,7 +17,7 @@ public class FireballAction : StandardAbilityAction, IDamageSource {
     }
 
     protected override IEnumerator PerformAction() {
-        Projectile projectile = projectilePool.Get<Projectile>();
+        Projectile projectile = PhotonNetwork.Instantiate(Path.Combine("Prefabs","Fireball Projectile lvl 3"),Vector3.zero,Quaternion.identity,0).GetComponent<Projectile>();
         projectile.Reset();
         projectile.GetComponent<Damage>().DamageSource = this;
         projectile.Owner = actor;

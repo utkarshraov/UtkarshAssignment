@@ -68,6 +68,7 @@ public class Game : MonoBehaviour, IAppAware {
     private void Awake()
     {
         instance = this;
+
     }
 
     public void StartGame() {

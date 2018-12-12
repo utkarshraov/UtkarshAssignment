@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Framework/Splash/Splash.unity
     guid: ee174d1e6d6ef4744a0e06f201e15583
   - enabled: 0
     path: Assets/Assignment/GameConfiguration.unity
     guid: 4b84aa54234985e438e3d4d23a590ad6
-  - enabled: 0
-    path: Assets/Framework/Loading/LoadingScreen.unity
-    guid: 0bfd882b236fb454fb9b2fc018f28647
+  - enabled: 1
+    path: Assets/Framework/Main Menu/MainMenu.unity
+    guid: eb2b678503ae84040bfc2c006eab2801
   - enabled: 1
     path: Assets/Assignment/MultiplayerLobby.unity
     guid: e2a8830a2647325409e3383f198576dd
   - enabled: 1
+    path: Assets/Framework/Loading/LoadingScreen.unity
+    guid: 0bfd882b236fb454fb9b2fc018f28647
+  - enabled: 1
     path: Assets/Assignment/WarlocksGame.unity
     guid: 4819c0ca8743a4174bdb25b5a2854952
-  - enabled: 1
-    path: Assets/Framework/Main Menu/MainMenu.unity
-    guid: eb2b678503ae84040bfc2c006eab2801
   m_configObjects: {}

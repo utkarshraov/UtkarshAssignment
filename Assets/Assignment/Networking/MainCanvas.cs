@@ -21,6 +21,6 @@ public class MainCanvas : MonoBehaviour {
 
     public void OnClickExit()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
